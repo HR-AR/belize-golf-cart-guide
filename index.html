@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caye Caulker Golf Cart Guide | March 29 - April 2, 2026</title>
+<style>
+  :root {
+    --teal: #0d9488;
+    --teal-dark: #0f766e;
+    --red: #dc2626;
+    --amber: #d97706;
+    --green: #16a34a;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding-bottom: 80px;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+    padding: 2rem 1.25rem;
+    text-align: center;
+  }
+  .hero h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  .hero .subtitle { font-size: 0.95rem; opacity: 0.9; }
+  .hero .dates {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .alert {
+    background: #fef2f2;
+    border-left: 4px solid var(--red);
+    padding: 0.85rem 1rem;
+    margin: 1rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+  }
+  .alert strong { color: var(--red); }
+  .alert-amber {
+    background: #fffbeb;
+    border-left-color: var(--amber);
+  }
+  .alert-amber strong { color: var(--amber); }
+  .container { max-width: 700px; margin: 0 auto; padding: 0 1rem; }
+  section { margin: 1.5rem 0; }
+  h2 {
+    font-size: 1.2rem;
+    color: var(--teal-dark);
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 0.35rem;
+    margin-bottom: 1rem;
+  }
+  h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: var(--text); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .card.recommended {
+    border-color: var(--green);
+    border-width: 2px;
+  }
+  .card.avoid {
+    border-color: var(--red);
+    border-width: 2px;
+    background: #fef2f2;
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-green { background: #dcfce7; color: #15803d; }
+  .badge-red { background: #fee2e2; color: #b91c1c; }
+  .badge-amber { background: #fef3c7; color: #92400e; }
+  .badge-blue { background: #dbeafe; color: #1e40af; }
+  .company-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .rating { color: var(--amber); font-weight: 600; }
+  .price { font-size: 1.15rem; font-weight: 700; color: var(--teal-dark); }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+  }
+  .btn-whatsapp { background: #25d366; }
+  .btn-phone { background: #3b82f6; }
+  .btn-web { background: var(--teal); }
+  .btn-fb { background: #1877f2; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+  }
+  th {
+    background: var(--teal);
+    color: white;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  .horror-item {
+    background: #fef2f2;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    border-left: 3px solid var(--red);
+  }
+  .horror-item strong { color: var(--red); }
+  .tip-item {
+    background: #f0fdf4;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    border-left: 3px solid var(--green);
+  }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+  }
+  .checklist li::before {
+    content: "\2610";
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+  }
+  .timeline {
+    border-left: 3px solid var(--teal);
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+  }
+  .timeline-item {
+    margin-bottom: 0.85rem;
+    position: relative;
+  }
+  .timeline-item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--teal);
+    border-radius: 50%;
+    position: absolute;
+    left: -1.35rem;
+    top: 0.4rem;
+  }
+  .timeline-time {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--teal-dark);
+  }
+  .timeline-desc { font-size: 0.85rem; color: var(--muted); }
+  .tab-nav {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 1rem;
+  }
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+  }
+  .tab-btn.active {
+    color: var(--teal-dark);
+    border-bottom-color: var(--teal);
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .whatsapp-template {
+    background: #dcfce7;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 0.85rem;
+    font-family: inherit;
+    white-space: pre-wrap;
+    position: relative;
+    margin: 0.75rem 0;
+  }
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .restaurant-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .restaurant-info { flex: 1; }
+  .restaurant-rating {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--amber);
+    white-space: nowrap;
+  }
+  .nav-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  }
+  .nav-item {
+    text-align: center;
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+  }
+  .nav-item .icon { font-size: 1.2rem; display: block; }
+  .nav-item.active { color: var(--teal); }
+  .rule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .rule-card {
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .rule-card .icon { font-size: 1.3rem; display: block; margin-bottom: 0.25rem; }
+  .rule-card strong { display: block; font-size: 0.75rem; }
+  @media (min-width: 600px) {
+    .rule-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Caye Caulker Golf Cart Guide</h1>
+  <div class="subtitle">133 Xocol, Caye Caulker, Belize</div>
+  <div class="dates">March 29 - April 2, 2026</div>
+</div>
+
+<div class="alert-amber alert">
+  <strong>CURRENCY:</strong> All prices on this page are in <strong>USD</strong> unless marked BZD. Exchange rate: 2 BZD = 1 USD. US dollars accepted everywhere on the island.
+</div>
+
+<div class="alert">
+  <strong>HOLY WEEK ALERT:</strong> Your dates fall during peak season (Easter April 5). Prices will be at the high end ($75-100/day) and availability is tight. Book NOW via WhatsApp.
+</div>
+
+<div class="container">
+
+<!-- NAVIGATION TABS -->
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('rentals')">Rentals</button>
+  <button class="tab-btn" onclick="showTab('warnings')">Warnings</button>
+  <button class="tab-btn" onclick="showTab('booking')">Book Now</button>
+  <button class="tab-btn" onclick="showTab('transport')">Transport</button>
+  <button class="tab-btn" onclick="showTab('food')">Food</button>
+  <button class="tab-btn" onclick="showTab('logistics')">Day Plan</button>
+</div>
+
+<!-- TAB: RENTALS -->
+<div id="rentals" class="tab-content active">
+  <section>
+    <h2>Recommended Rentals</h2>
+
+    <div class="card recommended">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <span class="badge badge-green">Best Pick</span>
+          <div class="company-name">Eco Beach Rides</div>
+          <div class="rating">5.0/5 TripAdvisor</div>
+        </div>
+        <div class="price">$250-325<br><small style="font-size:0.7rem;color:var(--muted);">4 days est.</small></div>
+      </div>
+      <p style="font-size:0.85rem;margin:0.5rem 0;color:var(--muted);">
+        Only solar-powered carts on island. Silent, Bluetooth radios, no emissions. Battery lasts all day (91% after full day use). Unique experience.
+      </p>
+      <div class="contact-row">
+        <a href="https://wa.me/5016287254" class="contact-btn btn-whatsapp">WhatsApp +501-628-7254</a>
+        <a href="https://ecobeachrides.com/" class="contact-btn btn-web">Website</a>
+      </div>
+    </div>
+
+    <div class="card recommended">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <span class="badge badge-green">Most Reliable</span>
+          <div class="company-name">Buddy's Golf Cart Rentals</div>
+          <div class="rating">Est. 2005 &middot; 4.7 Google</div>
+        </div>
+        <div class="price">$200-280<br><small style="font-size:0.7rem;color:var(--muted);">4 days est.</small></div>
+      </div>
+      <p style="font-size:0.85rem;margin:0.5rem 0;color:var(--muted);">
+        Longest-running rental on island. Reliable, well-maintained fleet. ~$300/week. Pickup and delivery included.
+      </p>
+      <div class="contact-row">
+        <a href="https://wa.me/5016288508" class="contact-btn btn-whatsapp">WhatsApp +501-628-8508</a>
+        <a href="tel:+5012260607" class="contact-btn btn-phone">Call +501-226-0607</a>
+        <a href="https://www.facebook.com/buddys.bz/" class="contact-btn btn-fb">Facebook</a>
+      </div>
+    </div>
+
+    <div class="card recommended">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <span class="badge badge-blue">Well-Maintained</span>
+          <div class="company-name">J & Sons Xtreme Karts</div>
+          <div class="rating">5.0/5 TripAdvisor &middot; 4.5 Google</div>
+        </div>
+        <div class="price">$200-280<br><small style="font-size:0.7rem;color:var(--muted);">4 days est.</small></div>
+      </div>
+      <p style="font-size:0.85rem;margin:0.5rem 0;color:var(--muted);">
+        Also the island's golf cart repair shop. Carts are the best mechanically maintained on Caye Caulker.
+      </p>
+      <div class="contact-row">
+        <a href="tel:+5012260475" class="contact-btn btn-phone">Call +501-226-0475</a>
+      </div>
+    </div>
+
+    <h3>Other Options</h3>
+    <div class="card">
+      <div class="company-name" style="font-size:0.95rem;">C&S Golf Cart Rentals</div>
+      <p style="font-size:0.85rem;color:var(--muted);">Newer entrant. Carts with built-in coolers and lockable storage. Good for advance bookings.</p>
+    </div>
+
+    <div class="card">
+      <div class="company-name" style="font-size:0.95rem;">Hotel/Resort Fleet</div>
+      <p style="font-size:0.85rem;color:var(--muted);">Ask your accommodation at 133 Xocol if they have guest carts. Often ~$40/day.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Companies to AVOID</h2>
+
+    <div class="card avoid">
+      <span class="badge badge-red">AVOID</span>
+      <div class="company-name">C&N Golf Cart Rental</div>
+      <p style="font-size:0.85rem;margin-top:0.3rem;">
+        TripAdvisor warnings: overcharging, doesn't honor rental agreements. Customer paid for 11 days, cart damaged on day 5, C&N demanded $700 for repairs (independent shop quoted $300). No resolution. Ghosted customer.
+      </p>
+    </div>
+
+    <div class="card avoid">
+      <span class="badge badge-red">NOT READY</span>
+      <div class="company-name">Luxury Island Bike & Golf Cart</div>
+      <p style="font-size:0.85rem;margin-top:0.3rem;">
+        New business. Golf carts listed as "COMING SOON" &mdash; bikes only. No reviews yet.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pricing Context</h2>
+    <table>
+      <tr><th>Factor</th><th>Detail</th></tr>
+      <tr><td>Daily rate (Caye Caulker)</td><td><strong>$60-100 USD</strong> (peak: $75-100)</td></tr>
+      <tr><td>4-day target price</td><td><strong>$200-325 USD</strong></td></tr>
+      <tr><td>Weekly rate</td><td>~$300-500 USD</td></tr>
+      <tr><td>Security deposit</td><td>$250-500 credit card hold</td></tr>
+      <tr><td>Golf cart taxi</td><td>$5 USD flat rate anywhere</td></tr>
+      <tr><td>Bicycle rental</td><td>$7.50/day (alternative)</td></tr>
+    </table>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:0.5rem;">
+      Note: Caye Caulker is more expensive than Ambergris Caye ($30-35/day) due to less competition. Holy Week pricing may eliminate multi-day discounts.
+    </p>
+  </section>
+</div>
+
+<!-- TAB: WARNINGS -->
+<div id="warnings" class="tab-content">
+  <section>
+    <h2>Scams & Horror Stories</h2>
+
+    <div class="horror-item">
+      <strong>#1 "Phantom Damage" Scam</strong><br>
+      Agent points out pre-existing scratch/dent at return, demands $200-500 "repair fee." ALWAYS record a 360-degree walkaround video <em>with the attendant in the frame</em> before leaving the lot.
+    </div>
+
+    <div class="horror-item">
+      <strong>Fake Website Scam</strong><br>
+      Clone websites for "Caye Caulker Rentals" demand full payment via Zelle/Venmo. Legit companies take credit card or payment on arrival. NEVER pay via Zelle/Venmo.
+    </div>
+
+    <div class="horror-item">
+      <strong>Gas/Fuel Gouging</strong><br>
+      Cart given at 1/4 tank, told "return as found." Then charged $50 "refueling fee" for $5 of gas. Insist on <strong>full-to-full</strong> policy. Photograph gas gauge at pickup AND return.
+    </div>
+
+    <div class="horror-item">
+      <strong>C&N Rental Agreement Violation</strong><br>
+      Customer paid 11 days, cart damaged day 5. C&N demanded $700 for repairs (independent shop: $300). Company ghosted. No resolution.
+    </div>
+
+    <div class="horror-item">
+      <strong>Price Bait-and-Switch</strong><br>
+      Quoted $90 verbally, billed $136 because "you had the cart on the last day." Get total price in writing via WhatsApp BEFORE arrival. Screenshot the message.
+    </div>
+
+    <div class="horror-item">
+      <strong>Deposit Not Returned</strong><br>
+      Cash deposits harder to recover. Use credit card hold instead. Ensure return inspection happens while you are present.
+    </div>
+  </section>
+
+  <section>
+    <h2>Protection Checklist</h2>
+    <ul class="checklist">
+      <li>Record time-stamped walkaround video WITH attendant in frame</li>
+      <li>Get total price in writing via WhatsApp (screenshot it)</li>
+      <li>Confirm full-to-full gas policy</li>
+      <li>Photograph gas gauge at pickup AND return</li>
+      <li>Use credit card hold (not cash deposit)</li>
+      <li>Ask about insurance/liability coverage</li>
+      <li>Get return process in writing (when, where, who inspects)</li>
+      <li>Never pay via Zelle or Venmo</li>
+      <li>Join "Caye Caulker Peeps" Facebook group for real-time intel</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Driving Rules</h2>
+    <div class="rule-grid">
+      <div class="rule-card">
+        <span class="icon">&#x1F4B3;</span>
+        <strong>License Required</strong>
+        Carry physical home-country license
+      </div>
+      <div class="rule-card">
+        <span class="icon">&#x27A1;&#xFE0F;</span>
+        <strong>Drive Right</strong>
+        US-style, right side of road
+      </div>
+      <div class="rule-card">
+        <span class="icon">&#x1F6AB;</span>
+        <strong>No Beach Driving</strong>
+        Cart seizure + heavy fine
+      </div>
+      <div class="rule-card">
+        <span class="icon">&#x1F422;</span>
+        <strong>Go Slow</strong>
+        10-15 mph speed limit
+      </div>
+      <div class="rule-card">
+        <span class="icon">&#x1F6B6;</span>
+        <strong>Yield Always</strong>
+        Pedestrians, bikes, dogs
+      </div>
+      <div class="rule-card">
+        <span class="icon">&#x1F334;</span>
+        <strong>No Coconut Trees</strong>
+        Don't park under (solar panels)
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;">
+      Roads are unpaved sand/crushed coral. Bumpy, dusty, muddy after rain. Traffic wardens patrol during Holy Week.
+    </p>
+  </section>
+</div>
+
+<!-- TAB: BOOKING -->
+<div id="booking" class="tab-content">
+  <section>
+    <h2>Book Now via WhatsApp</h2>
+
+    <div class="alert-amber alert">
+      <strong>Holy Week = Limited Availability.</strong> Send these messages NOW. First come, first served.
+    </div>
+
+    <h3>Quick Contact</h3>
+    <div class="contact-row" style="margin-bottom:1rem;">
+      <a href="https://wa.me/5016287254" class="contact-btn btn-whatsapp" style="font-size:0.9rem;padding:0.6rem 1rem;">Eco Beach +501-628-7254</a>
+      <a href="https://wa.me/5016288508" class="contact-btn btn-whatsapp" style="font-size:0.9rem;padding:0.6rem 1rem;">Buddy's +501-628-8508</a>
+    </div>
+
+    <h3>Message Template</h3>
+    <div class="whatsapp-template" id="msgTemplate">
+      <button class="copy-btn" onclick="copyTemplate()">COPY</button>Hi! We're visiting Caye Caulker March 29 - April 2 (4 days). Looking for a golf cart for 2 adults and a toddler.
+
+Can you confirm:
+1. Availability for those dates?
+2. Total price for 4 full days?
+3. What's included (gas, delivery)?
+4. Security deposit amount?
+5. Gas policy (full-to-full)?
+
+We're arriving by flight around [TIME]. Can you deliver to the airstrip?
+
+Thanks!</div>
+
+    <h3>Facebook Groups (Real-Time Intel)</h3>
+    <div class="tip-item">
+      <strong>Caye Caulker Peeps</strong> &mdash; Most active group. Scam reports posted within hours. Search before you book.
+    </div>
+    <div class="tip-item">
+      <strong>Caye Caulker, Belize</strong> &mdash; General community news and travel tips.
+    </div>
+  </section>
+</div>
+
+<!-- TAB: TRANSPORT -->
+<div id="transport" class="tab-content">
+  <section>
+    <h2>Getting to Caye Caulker</h2>
+
+    <div class="card recommended">
+      <span class="badge badge-green">Recommended</span>
+      <h3 style="margin-top:0.3rem;">Puddle Jumper Flight</h3>
+      <table>
+        <tr><td>Airlines</td><td><strong>Tropic Air / Maya Island Air</strong></td></tr>
+        <tr><td>Route</td><td>BZE &rarr; CUK (direct)</td></tr>
+        <tr><td>Flight time</td><td><strong>10 minutes</strong></td></tr>
+        <tr><td>Cost</td><td>$93-102 one-way / $184-200 RT</td></tr>
+        <tr><td>Flights until</td><td>6:30 PM</td></tr>
+        <tr><td>Your timeline</td><td>Customs ~3:30 &rarr; catch 3:40-4:30 flight &rarr; on island by 4:40 PM</td></tr>
+      </table>
+      <div class="contact-row" style="margin-top:0.75rem;">
+        <a href="https://www.tropicair.com/" class="contact-btn btn-web">Tropic Air</a>
+        <a href="https://www.mayaislandair.com/" class="contact-btn btn-web">Maya Island Air</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="badge badge-amber">Budget Option</span>
+      <h3 style="margin-top:0.3rem;">Water Taxi / Ferry</h3>
+      <table>
+        <tr><td>Companies</td><td>San Pedro Belize Express / Caribbean Sprinter</td></tr>
+        <tr><td>Ride time</td><td>45 min ferry + 25 min taxi to terminal</td></tr>
+        <tr><td>Cost</td><td>$43-55 total</td></tr>
+        <tr><td>Last boats</td><td>SPBE 5:30 PM / Sprinter 5:40 PM</td></tr>
+        <tr><td>Your timeline</td><td>Customs 3:30 &rarr; terminal 4:00 &rarr; catch 4:30 or 5:40 &rarr; arrive 5:15-6:25 PM</td></tr>
+      </table>
+      <div class="contact-row" style="margin-top:0.75rem;">
+        <a href="https://belizewatertaxi.com/" class="contact-btn btn-web">Belize Express</a>
+        <a href="https://sprinter.bz/" class="contact-btn btn-web">Caribbean Sprinter</a>
+      </div>
+    </div>
+
+    <h3>Comparison</h3>
+    <table>
+      <tr><th>Factor</th><th>Flight</th><th>Ferry</th></tr>
+      <tr><td>Total time</td><td><strong>~1 hour</strong></td><td>2-3.5 hours</td></tr>
+      <tr><td>Cost</td><td>$93-102</td><td><strong>$43-55</strong></td></tr>
+      <tr><td>On island by</td><td><strong>~4:30 PM</strong></td><td>5:15-6:25 PM</td></tr>
+      <tr><td>Risk</td><td><strong>Very low</strong></td><td>Moderate (last boat)</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>On the Island</h2>
+    <p style="font-size:0.9rem;margin-bottom:0.75rem;">
+      CUK airstrip is on the south end. Your accommodation at <strong>133 Xocol</strong> is in the village center &mdash; a $5 golf cart taxi ride or ~10 min walk. If you've pre-booked, your rental company will meet you at the airstrip with the cart.
+    </p>
+    <div class="tip-item">
+      <strong>No cars on the island.</strong> Only golf carts, bicycles, and feet. Three streets run north-south. Sand roads, no pavement. Impossible to get lost.
+    </div>
+
+    <h3>Do You Need a Taxi from the Airstrip?</h3>
+    <div class="card recommended">
+      <span class="badge badge-green">No Taxi Needed</span>
+      <p style="font-size:0.9rem;margin-top:0.3rem;">
+        If you <strong>pre-book your golf cart via WhatsApp</strong>, the rental company delivers it to the CUK airstrip and meets you when you land. You drive straight to 133 Xocol (~5 min). No taxi required.
+      </p>
+      <p style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;">
+        If you arrive WITHOUT a cart pre-booked: golf cart taxis wait at the airstrip. Flat rate <strong>$5 USD ($10 BZD)</strong> anywhere on the island. Or walk ~10 min to 133 Xocol.
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- TAB: FOOD -->
+<div id="food" class="tab-content">
+  <section>
+    <h2>Restaurants &mdash; Belize City</h2>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1rem;">Family-friendly options (toddler-safe) near the route to the airport.</p>
+
+    <div class="card recommended">
+      <span class="badge badge-green">On Airport Road</span>
+      <div class="restaurant-card">
+        <div class="restaurant-info">
+          <div class="company-name">Sahara Grill</div>
+          <p style="font-size:0.85rem;color:var(--muted);">Lebanese &mdash; shawarmas, kebabs, hummus, gyros. Family-friendly, quick service. <strong>Literally on Philip Goldson Highway</strong> (the road to the airport). Zero detour.</p>
+        </div>
+        <div class="restaurant-rating">4.5</div>
+      </div>
+    </div>
+
+    <h3>Downtown Options</h3>
+
+    <div class="card">
+      <div class="restaurant-card">
+        <div class="restaurant-info">
+          <div class="company-name" style="font-size:0.95rem;">Midtown Restaurant</div>
+          <p style="font-size:0.8rem;color:var(--muted);">Caribbean/International. Large portions, relaxed vibe, free parking. Best all-around family pick.</p>
+        </div>
+        <div class="restaurant-rating">4.5</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="restaurant-card">
+        <div class="restaurant-info">
+          <div class="company-name" style="font-size:0.95rem;">Bird's Isle</div>
+          <p style="font-size:0.8rem;color:var(--muted);">Belizean Creole/Seafood. Outdoor waterfront, casual. 90 Albert St. The quintessential Belize City experience. Conch fritters, grilled lobster.</p>
+        </div>
+        <div class="restaurant-rating">4.4</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="restaurant-card">
+        <div class="restaurant-info">
+          <div class="company-name" style="font-size:0.95rem;">Nerie's</div>
+          <p style="font-size:0.8rem;color:var(--muted);">Authentic Belizean. Local vibe, balcony seating. Daly St. Real-deal rice & beans, stew chicken.</p>
+        </div>
+        <div class="restaurant-rating">4.2</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="restaurant-card">
+        <div class="restaurant-info">
+          <div class="company-name" style="font-size:0.95rem;">Sugarfix Bakery</div>
+          <p style="font-size:0.8rem;color:var(--muted);">Pastries & bakery. Clean, quick. Heusner Crescent. Perfect for toddler snacks.</p>
+        </div>
+        <div class="restaurant-rating">4.4</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TAB: LOGISTICS -->
+<div id="logistics" class="tab-content">
+  <section>
+    <h2>Day-by-Day Plan</h2>
+
+    <h3>Day 1 &mdash; March 29 (Arrival)</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">2:50 PM</div>
+        <div class="timeline-desc">Arrive BZE International</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">~3:30 PM</div>
+        <div class="timeline-desc">Clear customs, walk to domestic counter</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">~4:00 PM</div>
+        <div class="timeline-desc">Puddle jumper to Caye Caulker (10 min flight)</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">~4:15 PM</div>
+        <div class="timeline-desc">Land at CUK airstrip</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">~4:20 PM</div>
+        <div class="timeline-desc">Meet rental company at airstrip, record walkaround video, sign paperwork</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">~4:30 PM</div>
+        <div class="timeline-desc">Drive to 133 Xocol (~5 min)</div>
+      </div>
+    </div>
+
+    <h3>Days 2-3 &mdash; March 30-31</h3>
+    <div class="tip-item">
+      Explore island by golf cart. The Split, snorkeling, restaurants. Use cart for grocery runs and evening outings. The island is tiny but the cart makes it fun.
+    </div>
+
+    <h3>Day 4 &mdash; April 1</h3>
+    <div class="tip-item">
+      Last full day with cart. Confirm return time/process with rental company via WhatsApp.
+    </div>
+
+    <h3>Day 5 &mdash; April 2 (Departure)</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">Morning</div>
+        <div class="timeline-desc">Return golf cart. Attend inspection. Get deposit released.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Departure</div>
+        <div class="timeline-desc">$5 golf cart taxi or walk to airstrip/dock</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quick Reference</h2>
+    <table>
+      <tr><th>Item</th><th>Detail</th></tr>
+      <tr><td>Address</td><td>133 Xocol, Caye Caulker</td></tr>
+      <tr><td>Island size</td><td>~1.25 miles inhabited</td></tr>
+      <tr><td>Currency</td><td>BZD (2 BZD = 1 USD, USD accepted everywhere)</td></tr>
+      <tr><td>Speed limit</td><td>10-15 mph ("Go Slow")</td></tr>
+      <tr><td>Taxi flat rate</td><td>$5 USD / $10 BZD anywhere</td></tr>
+      <tr><td>Emergency</td><td>911 (police), 90 (fire/ambulance)</td></tr>
+    </table>
+  </section>
+</div>
+
+</div><!-- /container -->
+
+<!-- BOTTOM NAV -->
+<nav class="nav-bottom">
+  <a href="#" class="nav-item active" onclick="showTab('rentals');return false;">
+    <span class="icon">&#x1F6FA;</span>Rentals
+  </a>
+  <a href="#" class="nav-item" onclick="showTab('warnings');return false;">
+    <span class="icon">&#x26A0;&#xFE0F;</span>Warnings
+  </a>
+  <a href="#" class="nav-item" onclick="showTab('booking');return false;">
+    <span class="icon">&#x1F4F1;</span>Book
+  </a>
+  <a href="#" class="nav-item" onclick="showTab('transport');return false;">
+    <span class="icon">&#x2708;&#xFE0F;</span>Travel
+  </a>
+  <a href="#" class="nav-item" onclick="showTab('food');return false;">
+    <span class="icon">&#x1F37D;&#xFE0F;</span>Food
+  </a>
+  <a href="#" class="nav-item" onclick="showTab('logistics');return false;">
+    <span class="icon">&#x1F4C5;</span>Plan
+  </a>
+</nav>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  // Highlight matching tab button
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    if (b.textContent.toLowerCase().includes(id.substring(0,4))) b.classList.add('active');
+  });
+  // Highlight matching nav item
+  document.querySelectorAll('.nav-item').forEach(n => {
+    const txt = n.textContent.toLowerCase().trim();
+    const map = {rentals:'rentals',warnings:'warn',book:'booking',travel:'transport',food:'food',plan:'logistics'};
+    Object.entries(map).forEach(([k,v]) => { if (txt.includes(k) && v===id) n.classList.add('active'); });
+  });
+  window.scrollTo(0,0);
+}
+
+function copyTemplate() {
+  const el = document.getElementById('msgTemplate');
+  const text = el.textContent.replace('COPY','').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = el.querySelector('.copy-btn');
+    btn.textContent = 'COPIED!';
+    setTimeout(() => btn.textContent = 'COPY', 2000);
+  });
+}
+</script>
+
+</body>
+</html>
